@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: block;
+}
+
+/* Sky background */
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #001c33, #002a44, #003b5b, #014f70, #017a99);
+  z-index: 1;
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  top: 15%;
+  left: 70%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #fff 50%, transparent 52%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+/* Planets */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+}
+
+.planet1 {
+  top: 25%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #d18c47, #a66433);
+}
+
+.planet2 {
+  top: 50%;
+  left: 40%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #72a0c1, #4b7391);
+}
+
+.planet3 {
+  top: 10%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #95d1a7, #6da581);
+}
+
+/* Trees at the bottom */
+.trees {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: url('https://www.transparenttextures.com/patterns/trees.png') repeat-x bottom;
+  z-index: 1;
+}
